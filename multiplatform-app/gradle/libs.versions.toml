@@ -1,0 +1,37 @@
+[versions]
+agp = "8.5.2"
+android-compileSdk = "34"
+android-minSdk = "31"
+android-targetSdk = "34"
+androidx-activityCompose = "1.9.2"
+androidx-lifecycle = "2.8.2"
+compose-plugin = "1.7.0-alpha03"
+kotlin = "2.0.0"
+kotlin-coroutines = "1.9.0"
+ktor = "2.3.12"
+androidx-navigation = "2.8.0-alpha09"
+
+[libraries]
+platform-androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+platform-androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
+platform-androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+ui-compose-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "androidx-navigation" }
+utils-compose-hooks = { module = "xyz.junerver.compose:hooks2", version = "2.1.0-alpha0" }
+data-settings-multiplatform = { module="de.charlex.settings:settings-datastore", version="2.0.0-alpha02"}
+web-ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+web-ktor-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+web-ktor-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+web-ktor-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+web-ktor-serialization-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+utils-lang-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlin-coroutines" }
+utils-lang-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlin-coroutines" }
+utils-lang-serialization-json = { module="org.jetbrains.kotlinx:kotlinx-serialization-json", version= "1.7.1"}
+
+[plugins]
+platform-android-application = { id = "com.android.application", version.ref = "agp" }
+platform-android-library = { id = "com.android.library", version.ref = "agp" }
+ui-jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
+ui-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+lang-kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+lang-kotlin-ksp = { id = "com.google.devtools.ksp", version = "2.0.0-1.0.24" }
+utils-web-ktor = { id = "io.ktor.plugin", version.ref = "ktor" }
